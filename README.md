@@ -1,17 +1,30 @@
-# task_manager
+# 📱 Task Manager
 
-A new Flutter project.
+Aplicativo mobile de gerenciamento de tarefas desenvolvido com Flutter, com foco em organização diária e produtividade.
 
-## Getting Started
+---
 
-This project is a starting point for a Flutter application.
+##  Funcionalidades
 
-A few resources to get you started if this is your first Flutter project:
+- ✅ Criação de tarefas
+- 📋 Listagem de tarefas
+- 🔄 Alteração de status (pendente ⇄ concluída)
+- 🗑 Remoção de tarefas
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+---
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+##  Arquitetura
+
+O projeto segue uma separação simples de responsabilidades:
+
+- **models/** → estrutura de dados (Task)
+- **services/** → lógica de manipulação de dados (simulação de backend)
+- **screens/** → interface do usuário
+- **main.dart** → ponto de entrada da aplicação
+
+---
+
+##  Tecnologias utilizadas
+
+- Flutter
+- Dart
