@@ -1,6 +1,6 @@
 # 📱 Task Manager
 
-Aplicativo mobile de gerenciamento de tarefas desenvolvido com Flutter, com foco em organização diária e produtividade.
+Aplicação mobile desenvolvida com Flutter com o objetivo de gerenciar tarefas diárias de forma eficiente, explorando conceitos como separação de responsabilidades (models, services e UI), manipulação de estado com setState e construção de interfaces reativas. O projeto foi estruturado visando escalabilidade e futura integração com persistência de dados.
 
 ---
 
