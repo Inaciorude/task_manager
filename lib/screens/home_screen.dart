@@ -150,7 +150,7 @@ class _HomeScreenState extends State<HomeScreen> {
       },
       );
       },
-      ),
+        ),
       floatingActionButton: FloatingActionButton(
         onPressed: addTask,
         child: const Icon(Icons.add),
