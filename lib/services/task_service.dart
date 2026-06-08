@@ -1,15 +1,16 @@
 import '../models/task.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 
 class TaskService {
-  final List<Task> _tasks = [];
+  final FirebaseFirestore _firestore = FirebaseFirestore.instance;
 
   // Criar tarefa
-  void addTask(Task task) {
-    _tasks.add(task);
-  }
-
+  Future<void> addTask(Task task) async {
+    await _firestore.collection('tasks').add(task.toMap());
+}
+  
   // Listar tarefas
   List<Task> getTasks() {
-    return _tasks;
+    return [];
   }
 }
