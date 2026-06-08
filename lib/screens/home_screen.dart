@@ -10,6 +10,15 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+
+  Future<void> loadTasks() async {
+  final loadedTasks = await service.getTasks();
+
+  setState(() {
+    tasks = loadedTasks;
+  });
+  }
+
   final service = TaskService();
   List<Task> tasks = [];
   @override
@@ -25,7 +34,7 @@ class _HomeScreenState extends State<HomeScreen> {
     );
 
     service.addTask(task);
-    tasks = service.getTasks();
+    loadTasks();
   }
   void deleteTask(int index) {
   setState(() {
@@ -104,10 +113,8 @@ class _HomeScreenState extends State<HomeScreen> {
                   createdAt: DateTime.now(),
                 );
 
-                setState(() {
-                  service.addTask(newTask);
-                  tasks = service.getTasks();
-                });
+                service.addTask(newTask);
+                loadTasks();
 
                 Navigator.pop(context);
               },

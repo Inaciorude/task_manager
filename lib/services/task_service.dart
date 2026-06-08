@@ -10,7 +10,12 @@ class TaskService {
 }
   
   // Listar tarefas
-  List<Task> getTasks() {
-    return [];
-  }
+Future<List<Task>> getTasks() async {
+  final snapshot = await _firestore.collection('tasks').get();
+
+  return snapshot.docs.map((doc) {
+  return Task.fromMap(doc.data());
+  }).toList();
+
+}
 }
